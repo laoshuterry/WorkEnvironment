@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 alias anzhuang='sudo apt-get install'
 alias shengji='sudo apt-get upgrade'
 alias guazai='sudo mount -t vboxsf Share /mnt'
-alias vi='gvim'
+alias vi='gvim 2>/dev/null'
 alias apachestart='sudo service apache2 start'
 alias apachestop='sudo service apache2 stop'
 alias mysqlstart='sudo service mysql start'

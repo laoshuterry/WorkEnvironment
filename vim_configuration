@@ -26,6 +26,7 @@ Plugin 'bling/vim-airline'
 	let g:airline#extensions#tabline#left_alt_sep = '|'
 Plugin 'bufexplorer.zip'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'Gist.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "------------------------------------------------
