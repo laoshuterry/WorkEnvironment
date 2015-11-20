@@ -53,13 +53,16 @@ plugins=(git)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
+
 #JAVA Configuration
 export JAVA_HOME=/home/rain/APP/jdk1.8.0_65
 export PATH=$PATH:$JAVA_HOME/bin
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
 
+#GNU ARM Configuration
+export PATH=$PATH:/home/rain/APP/arm-2014.05/bin
 
 source $ZSH/oh-my-zsh.sh
 
