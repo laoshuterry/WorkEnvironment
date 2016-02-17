@@ -57,6 +57,7 @@ Plugin 'neocomplcache'
 Plugin 'ervandew/supertab'
 Plugin 'yegappan/grep'
 Plugin 'ctrlp.vim'
+Plugin 'wmgraphviz'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "------------------------------------------------
