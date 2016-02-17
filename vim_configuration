@@ -7,11 +7,13 @@ function! OSSetting()
 		return "mac"
 	endif
 endfunction
-
-if OSSetting()=="unix"||OSSetting()=="mac"
-    set shell=bash
+set shell=zsh
+if OSSetting()=="unix"
+	set guifont=DejaVuSansMonoForPowerline:h13
+elseif OSSetting()=="mac"
+	set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 else
-    "set shell=D:cygwininsh
+	set shell=D:cygwininsh
 endif
 
 set nocompatible              " be iMproved, required
