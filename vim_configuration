@@ -10,11 +10,11 @@ function! OSSetting()
 endfunction
 set shell=zsh
 if OSSetting()=="unix"
-	set guifont=DejaVuSansMonoForPowerline:h13
-elseif OSSetting()=="mac"
 	set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+elseif OSSetting()=="mac"
+    set guifont=Sauce Code Powerline:h12
 else
-	set shell=D:cygwininsh
+    set shell=D:cygwininsh
 endif
 
 set nocompatible              " be iMproved, required
@@ -52,6 +52,8 @@ Plugin 'DoxygenToolkit.vim'
 	let g:DoxygenToolkit_authorName="Y.Tian"
 Plugin 'a.vim'
 	nnoremap <silent> <F12> :A<CR>
+Plugin 'nathanaelkane/vim-indent-guides'
+	let g:indent_guides_auto_colors = 1
 Plugin 'bufexplorer.zip'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Gist.vim'
