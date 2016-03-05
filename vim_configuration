@@ -1,8 +1,13 @@
+"操作系统识别
+"参考网站http://vimhelp.appspot.com/eval.txt.html#feature-list，进入后查询macunix
 if has("unix")
-	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
-else
-	set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
+	if has("macunix")
+		set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
+	else
+		set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+	endif 
 endif
+
 set shell=zsh
 
 set nocompatible              " be iMproved, required
