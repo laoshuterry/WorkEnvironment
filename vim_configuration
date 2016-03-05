@@ -1,21 +1,12 @@
 "操作系统识别
-function! OSSetting()
-    if has("Win32")
-		return "win32"
-	elseif has("unix")
-		return "unix"
-	else 
-		return "mac"
-	endif
-endfunction
-set shell=zsh
-if OSSetting()=="unix"
+if has("unix")
 	set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
-elseif OSSetting()=="mac"
+elseif has("mac")
     set guifont=Sauce Code Powerline:h12
-else
-    set shell=D:cygwininsh
+elseif has("Win32")
+   	set shell=D:cygwininsh
 endif
+set shell=zsh
 
 set nocompatible              " be iMproved, required
 filetype on                  " required
