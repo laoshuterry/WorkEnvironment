@@ -1,10 +1,7 @@
-"操作系统识别
 if has("unix")
-	set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
-elseif has("mac")
-    set guifont=Sauce Code Powerline:h12
-elseif has("Win32")
-   	set shell=D:cygwininsh
+	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+else
+	set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
 endif
 set shell=zsh
 
@@ -59,7 +56,6 @@ filetype plugin indent on    " required
 "------------------------------------------------
 " 基本信息的设置
 "------------------------------------------------
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 set helplang=cn				"设置语言
 set tabstop=4				"设置tab键的宽度
 set shiftwidth=4			"设置缩进的空格数为4
