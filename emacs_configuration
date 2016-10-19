@@ -1,0 +1,51 @@
+(require 'package) ;; You might already have this line
+(setq package-archives '(("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+						 ("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("popkit" . "http://elpa.popkit.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+;设置用户名和邮件地址
+(setq user-full-name    "Y.Tian")
+(setq user-mail-address "dictatorterry@gmail.com")
+;设置Solarized主题
+(load-theme 'sanityinc-tomorrow-night  t)
+;设置TAB默认的宽度
+(setq default-tab-width 4)
+;在标题栏显示buffer的名字，而不是emacs@wangyin.com这样没用的提示
+(auto-image-file-mode)
+;光标移动到鼠标下时，鼠标自动弹开
+(mouse-avoidance-mode 'animate)
+;光标显示为一竖线
+(setq-default cursor-type 'bar)
+;关闭起动时的那个“开机画面”
+(setq inhibit-startup-message t)
+(setq initial-scratch-message "")
+;显示时间
+(display-time-mode 1) 
+;24小时格式
+(setq display-time-24hr-format t) 
+;显示日期
+(setq display-time-day-and-date t)
+;隐藏菜单设置
+;(menu-bar-mode -1)
+;隐藏工具栏
+(tool-bar-mode -1)
+;隐藏滚轴
+(scroll-bar-mode -1)
+;高亮当前行
+(global-hl-line-mode 1)
+;标题栏显示buffer名字
+(setq frame-title-format "%d@emacs")
+;防止页面滚动时跳动，scroll-margin 3可以在靠近屏幕边沿3行时就开始滚动，可以很好的看到上下文。
+(setq default-major-mode 'text-mode)
+;将yes/no替换为y/n
+(fset 'yes-or-no-p 'y-or-n-p)
+;------------------------------------------------------------------------------
+;MARKDOWN MODE设置
+;------------------------------------------------------------------------------
+(autoload 'markdown-mode "markdown-mode"
+"Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
