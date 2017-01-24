@@ -100,3 +100,109 @@ alias guanji='sudo shutdown -h now'
 alias gitpush='git push origin master'
 alias zhuxiao='gnome-session-quit'
 export PYTHONPATH="/home/rain"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define UINT unsigned int
+#define PI 3.14159265
+#define CIRCURL (2*PI)
+typedef struct HexagonPoint
+{
+     float radis;
+     UINT layer;
+     UINT serial_num;
+ }HexagonPoint;
+
+
+static UINT g_maxValue=0;
+
+int InitCellularDistrict(int iMaxSeqValue)
+{
+	if( iMaxSeqValue>=1 && iMaxSeqValue<=100000 )
+	{
+		g_maxValue=iMaxSeqValue;
+		return 0;
+	}
+	else
+		return -1;
+}
+
+UINT maxValue(UINT layer)						    
+{
+	/*
+	方式1：递归求解,每层最大值，比上一层多6i
+	
+	if(layer==0)
+		return 1;
+	else
+		return 6*layer+maxValue(layer-1);
+	
+	方式2：循环求解，每层个数比上一层多6个，原点不算
+	
+	UINT temp=1;
+	for (UINT i = 1; i <=layer ; ++i)
+	{
+		temp+=6*i;
+	}
+	return temp;
+	*/
+	//方式3：利用公司直接求解，每层最大值为6i(i+1)/2+1 => 3i(i+1)+1
+	return 3*layer*(layer+1)+1;
+
+}
+
+void initHexagonPoint( UINT num, HexagonPoint* point )
+{
+	if(point==NULL||num<=0)
+		return;
+	UINT	tempLayer;
+	UINT	maxValueofLayer;
+
+	if(num==1)
+	{
+		maxValueofLayer 	= 1;
+		point->serial_num	= num;
+		point->layer 		= 0;
+		point->radis 		= 0;
+	}
+	else
+	{
+		for ( tempLayer = 1; maxValue( tempLayer ) < num; tempLayer++ );
+		maxValueofLayer 	= maxValue( tempLayer );
+		point->serial_num	= num;
+		point->layer 		= tempLayer;
+		point->radis 		= CIRCURL * (num - (maxValueofLayer - 6 * tempLayer) ) / (6 * tempLayer);
+	}
+}
+int GetShortestPathLength(int iFirstValue, int iSecondValue)
+{
+	if(iFirstValue<=0||iSecondValue==0)
+		return -1;
+	if(iFirstValue==iSecondValue)
+		return 0;
+
+	HexagonPoint* point1=(HexagonPoint*)malloc(sizeof(HexagonPoint));
+	HexagonPoint* point2=(HexagonPoint*)malloc(sizeof(HexagonPoint));
+
+	initHexagonPoint(iFirstValue, point1);
+	initHexagonPoint(iSecondValue, point2);
+	printf("%d\t%d\t%f\n",point1->serial_num,point1->layer,point1->radis);
+	printf("%d\t%d\t%f\n",point2->serial_num,point2->layer,point2->radis);
+	double rad1=point1->radis;
+	double rad2=point2->radis;
+	// use formal：|AB|=√[ρ1²+ρ2²-2ρ1ρ2cos(θ1-θ2)]
+	double result=sqrt(pow((double)rad1,2)+pow((double)rad2,2)+cos((double)point1->radis-(double)point2->radis)*2*rad1*rad2);
+	printf("%f\n",result);
+
+	free(point1);point1=NULL;
+	free(point2);point2=NULL;
+	return 0;
+}
+
+int main(int argc, char **argv)
+{
+	GetShortestPathLength(30,19);
+	return 0;
+}
+
