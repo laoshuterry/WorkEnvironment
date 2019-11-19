@@ -46,4 +46,6 @@
 * YAML
 * vscode-icons
 * Markdown Shortcut
+
 https://www.leonschools.net/cms/lib/FL01903265/Centricity/Domain/6216/Logic%20Pro%20X.pdf
+https://kknews.cc/news/rj9qbar.html
