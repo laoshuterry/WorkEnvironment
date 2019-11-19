@@ -49,3 +49,4 @@
 
 https://www.leonschools.net/cms/lib/FL01903265/Centricity/Domain/6216/Logic%20Pro%20X.pdf
 https://kknews.cc/news/rj9qbar.html
+Jim Chapin - Advanced Techniques For The Modern Drummer.pdf
