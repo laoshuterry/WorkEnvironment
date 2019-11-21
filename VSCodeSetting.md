@@ -50,3 +50,5 @@
 https://www.leonschools.net/cms/lib/FL01903265/Centricity/Domain/6216/Logic%20Pro%20X.pdf
 https://kknews.cc/news/rj9qbar.html
 Jim Chapin - Advanced Techniques For The Modern Drummer.pdf
+https://www.nike.com/cn/u/custom-nike-air-max-90-by-you-10000575?mid=1074427490
+https://www.nike.com/cn/u/nike-air-force-one-mid-id-10000540?mid=1074427601
