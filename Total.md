@@ -46,3 +46,5 @@ Focusrite Scarlet 2i2|￥1050|￥1050|
 |Sony A7M2| -4600|
 |永诺闪光灯| -100|
 ## 总计：￥33328
+
+https://justmysocks3.net/members/getsub.php?service=251356&id=16a6fa62-5e0a-4d14-8f88-048e10cfc790
