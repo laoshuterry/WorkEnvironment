@@ -67,3 +67,5 @@ e9847-3536f
 00f6f-870a1
 3a877-f4521
 69b86-fad37
+
+https://embeddedartistry.com/blog/2019/05/06/programmers-lets-study-source-code-classics/
