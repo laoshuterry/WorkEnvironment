@@ -90,3 +90,12 @@ set laststatus=2    			"始终显示状态行
 set ruler          			"在编辑过程中，在右下角显示光标位置的状态行
 set hlsearch 				"高亮显示搜索结果
 set incsearch				"查询时非常方便，如要查找book单词，当输入到/b时，会自动找到第一个b开头的单词，当输入到bo时，会自动找到第一个bo开头的\单词，依次类推，进行查找时，使用此设置会快速找到答案，当你\找要匹配的单词时，别忘记回车
+
+
+http://theory.stanford.edu/~amitp/GameProgramming/
+GPU Zen 2: Advanced Rendering Techniques
+Core Techniques and Algorithms in Game Programming
+http://blog.minstrel.idv.tw/2004/12/star-algorithm.html
+A* 算法、闭包、协程
+https://zh.wikipedia.org/wiki/A*%E6%90%9C%E5%B0%8B%E6%BC%94%E7%AE%97%E6%B3%95
+
