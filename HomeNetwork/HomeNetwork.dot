@@ -1,0 +1,53 @@
+digraph  HomeNetwork {
+    subgraph cluster_0 {
+		style=filled;
+		color=lightgrey;
+        size=11;
+        node [style=filled,color=white, shape=rectangle];
+        HomeAssistance[label="HomeAssitance服务器"];
+        WifiRouter[label="二级无线路由"];
+        HomeAssistance->WifiRouter;
+        label = "客厅";
+    };
+    subgraph cluster_1 {
+        style=filled;
+		color=lightgrey;
+        node [style=filled,color=white, shape=rectangle];
+        Modem[label="光猫"];
+        PrimaryRouter[label="一级软路由"];
+        Switch[label="交换机"];
+        Modem->PrimaryRouter;
+        PrimaryRouter->WifiRouter[style="bold",color="blue",label="客厅网口1",fontsize="8",fontcolor="red"];
+        WifiRouter->Switch[style="bold",color="blue",label="客厅网口2",fontsize="8",fontcolor="red"];
+        label = "弱电箱";
+	}
+    subgraph cluster_2 {
+        style=filled;
+		color=lightgrey;
+        shape=rectangle;
+        node [style=filled,color=white, shape=rectangle];
+        Interface1[label="主卧网口"]
+        Switch->Interface1[style="bold",color="blue",label="主卧网口",fontsize="8",fontcolor="red"];
+        label = "主卧";
+	}
+    subgraph cluster_3 {
+        style=filled;
+		color=lightgrey;
+        shape=rectangle;
+        node [style=filled,color=white, shape=rectangle];
+        Interface2[label="书房网口1"];
+        Interface3[label="书房网口2"]
+        Switch->Interface2[style="bold",color="blue",label="书房网口1",fontsize="8",fontcolor="red"];
+        Switch->Interface3[style="bold",color="blue",label="书房网口2",fontsize="8",fontcolor="red"];
+        label = "书房";
+	}
+    subgraph cluster_4 {
+        style=filled;
+		color=lightgrey;
+        shape=rectangle;
+        node [style=filled,color=white];
+        Interface4[label="次卧网口"];
+        Switch->Interface4[style="bold",color="blue",label="次卧网口",fontsize="8",fontcolor="red"];
+        label = "次卧";
+	}
+}
